@@ -14,7 +14,10 @@ function forceLogin(key) {
 var _lightningReady = false;
 
 function setupLightning(callback) {
+	console.log('called setupLightning');
 	var appName = config.loApp;
+	console.log(appName);
+
 	var oauth = force.getOauth();
     if (!oauth) {
         alert("Please login to Salesforce.com first!");
@@ -28,6 +31,7 @@ function setupLightning(callback) {
 	} else {
 	    // Transform the URL for Lightning
 	    var url = oauth.instanceUrl.replace("my.salesforce", "lightning.force");
+		console.log(url);
 
 	    $Lightning.use(appName, 
 	        function() {
