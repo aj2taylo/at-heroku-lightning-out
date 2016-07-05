@@ -33,14 +33,26 @@ function setupLightning(callback) {
 	    var url = oauth.instanceUrl.replace("my.salesforce", "lightning.force");
 		console.log(url);
 
-	    $Lightning.use(appName, 
-	        function() {
+	    $Lightning.use(
+	    	appName, 
+	        /*function() {
 				_lightningReady = true;
 				document.getElementById("chatterFeedButton").style.display = "";
 				if (typeof callback === "function") {
 					callback();
 				}
-	        }, url, oauth.access_token);
+	        },*/
+			$Lightning.createComponent(
+	            "ltngx:contactUs",
+	            { },
+	            "myDivId",
+	            function(cmp) {
+	                console.log('component created');
+	                console.log(cmp);
+	            }
+	        ),	         
+	        url, oauth.access_token
+	    );
 	}
 }
 
