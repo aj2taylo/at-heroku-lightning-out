@@ -35,14 +35,14 @@ function setupLightning(callback) {
 
 	    $Lightning.use(
 	    	appName, 
-	        function() {
+	        /*function() {
 				_lightningReady = true;
 				document.getElementById("chatterFeedButton").style.display = "";
 				if (typeof callback === "function") {
 					callback();
 				}
-	        },
-			/*$Lightning.createComponent(
+	        },*/
+			$Lightning.createComponent(
 	            "ltngx:contactUs",
 	            { },
 	            "myDivId",
@@ -50,7 +50,7 @@ function setupLightning(callback) {
 	                console.log('component created');
 	                console.log(cmp);
 	            }
-	        ),*/	         
+	        ),	         
 	        url, oauth.access_token
 	    );
 	}
