@@ -12,7 +12,7 @@ What information is missing to complete the user story?
 
 Any assumptions, e.g. certain functionality already delivered, certain settings are on/off, etc.
 
-## ASSUMPTIONS
+## ACCEPTANCE CRITERIA
 
 List all features/functionality that must be correct in order for the story to pass
 
